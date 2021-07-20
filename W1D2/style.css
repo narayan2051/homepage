@@ -1,0 +1,49 @@
+body{
+  background-color: darkgray;
+  font-family: sans-serif;
+  margin: 0%;
+  padding: 1%;
+}
+
+.container{
+  width: 92%;
+  margin:0 auto;
+}
+
+ul,ol,h1,h2,h3,p{
+  margin: 0;
+  padding: 0;
+}
+
+.image-container{
+  display: inline-flex;
+}
+
+.ul-container ul{
+  margin-left: 3%;
+}
+
+.mood-container{
+  flex-wrap: wrap;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+
+img{
+  height: 200px;
+}
+
+h1,h2,h3{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: blue;
+  padding: 1%;
+  margin: 1%;
+}
+.mood-container h3{
+  padding: 2%;
+  background-color: darkgray;
+}
+
+p{
+  padding: 1%;
+}
