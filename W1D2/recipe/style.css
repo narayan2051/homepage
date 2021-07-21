@@ -1,0 +1,40 @@
+.lemon-container h3 {
+  font-size: 22pt;
+  text-align: center;
+}
+
+p {
+  margin: 0%;
+  padding: 0%;
+}
+
+.name-container {
+  margin-top: 1%;
+}
+
+h3 {
+  background-color: #f0f0f0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18pt;
+  color: #a4a400;
+  text-decoration: underline;
+}
+
+.comment-block {
+  padding: 0% 5%;
+}
+.comment-container {
+  background-color: #ffffa8;
+  margin-bottom: 1%;
+}
+
+.link-container a {
+  color: #a4a400;
+}
+
+.footer-container {
+  text-align: right;
+}
