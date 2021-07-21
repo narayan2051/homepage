@@ -1,6 +1,6 @@
 
 body{
-  background: url(img/silverware.jpg);
+  background-image: url(img/silverware.jpg);
   background-repeat: repeat;
   background-attachment: fixed;
 }
