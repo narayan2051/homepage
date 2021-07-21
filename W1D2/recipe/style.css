@@ -1,6 +1,8 @@
 
 body{
-  background: url(img/silverware.jpg) repeat center center fixed;
+  background: url(img/silverware.jpg);
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 .lemon-container h3 {
   font-size: 22pt;
