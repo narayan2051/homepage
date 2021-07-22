@@ -1,0 +1,44 @@
+.header {
+  background-color: #acd7e5;
+  text-align: center;
+  padding: 5px;
+}
+
+.menu-container {
+  color: white;
+  background-color: #2f4f4f;
+}
+
+.col1 {
+  background-color: #9d9d9d;
+  text-align: center;
+}
+.col2 {
+  background-color: #bbbbbb;
+  text-align: center;
+}
+.col3 {
+  background-color: #d6d6d6;
+  text-align: center;
+}
+
+.footer {
+  background-color: #2f4f4f;
+  text-align: center;
+}
+
+.column-container{
+  height: 50vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .column-container{
+   flex-wrap: wrap;
+  }
+  .col1, .col3{
+    width: 50%;
+  }
+  .col2 {
+    order: 1; width: 100%;
+  }
+}
