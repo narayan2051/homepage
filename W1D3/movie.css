@@ -1,0 +1,108 @@
+body {
+  background-image: url(img/background.png);
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  text-align: center;
+  background: url(img/bannerbg.png) repeat-x;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24pt;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 3px 3px #999999;
+}
+
+.overall-content {
+  margin: auto;
+  width: 800px;
+  border: 5px solid #807f7e;
+  background: url("img/rbg.png") repeat-x;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.overview {
+  width: 250px;
+  float: right;
+  padding-right: 0%;
+  padding: 0%;
+}
+.rottenbig {
+  width: 550px;
+  color: red;
+  font-size: 44pt;
+  font-weight: bold;
+  align-items: center;
+}
+
+.leftbar {
+  float: left;
+  width: 550px;
+}
+
+.review {
+  border: 2px solid gray;
+  padding: 8px;
+  background-color: #e8dc9b;
+  border-radius: 10px;
+}
+.review p img {
+  float: left;
+  margin-right: 5px;
+}
+.movie-description {
+  background-color: #a2b964;
+  margin-top: 0;
+  padding: 8pt;
+  font-size: 10pt;
+  margin-top:-4px;
+}
+
+.movie-description dt {
+  font-weight: bold;
+
+}
+.movie-description li {
+  list-style: none;
+
+}
+
+.review-main {
+  width: 47%;
+  margin: 1%;
+  margin-bottom: 18pt;
+  font-size: 8pt;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.review-main p {
+  margin: 8px;
+}
+.review-main p img {
+  float: left;
+}
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  background-color: #a2b964;
+  padding: 4pt;
+  text-align: center;
+  border-radius: 0 0 7px 0;
+  margin-top: -14px;
+}
+
+.validator {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 50%;
+}
