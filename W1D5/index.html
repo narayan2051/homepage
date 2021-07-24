@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+/* runs test to see if expected argument is === to value returned by function2test argument */
+function myFunctionTest(expected, found) {
+  if (expected === found) {
+    return "TEST SUCCEEDED";
+  } else {
+    return "TEST FAILED.  Expected " + expected + " found " + found;
+  }
+}
+
+/* max returns the maximum of 2 arguments */
+function max(a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  };
+}
+console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
+
+/* max3 takes 3 numbers as arguments and returns the largest */
+function maxOfThree(a, b, c) {
+  return max(max(a, b), c);
+}
+
+/*  Write a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.*/
+
+function isVowel(c){
+  c = c.toLowerCase();
+  return c==='a' || c==='e' || c==='i' || c==='o' ||c==='u';
+}
+
+/*function to get sum of array*/
+
+function sum(arr){
+  var sum=0;
+  if(arr.length>0){
+    for(let i=0 ; i < arr.length; i++ ){
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+/* Function to multiply array*/
+function multiply(arr){
+  var multiplySum=1;
+  if(arr.length>0){
+    for(let i=0 ; i < arr.length; i++ ){
+      multiplySum *= arr[i];
+    }
+  }
+  return multiplySum;
+}
+
+function reverse(str){
+
+var reverseStr="";
+for(let i=str.length;i>0;i--){
+  reverseStr+=str[i-1];
+}
+return reverseStr;
+}
+
+function findLongestWord(strArry){
+  var longLength=0;
+  if(strArry.length>0){
+    for(let i=0;i<strArry.length;i++){
+      if(longLength<strArry[i].length){
+        longLength=strArry[i].length;
+      }
+    }
+  }
+  return longLength;
+}
+
+
+function filterLongWords(strArray, num){
+  var newArr=[];
+  for(let i=0;i< strArray.length; i++){
+    if(strArray[i].length>num){
+      newArr.push(strArray[i]);
+    }
+  }
+  return newArr.toString();
+}
+
+
+function multiplyEachElementBy10(arr){
+  return arr.map(function(elem){
+    return elem*10;
+  });
+}
+
+function getArrayWithOnlyNumber3(arr){
+  return arr.filter(function (elem){
+    return elem===3;
+  });
+}
+
+function getProductOfArray(arr){
+  return arr.reduce(function(num1,num2){
+    return num1*num2;
+  });
+}
+
+console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, maxOfThree(5, 4, 44)));
+console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
+console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, maxOfThree(55, 4, 44)));
+console.log("Expected output of isVowel(E) is true  " + myFunctionTest(true, isVowel('E')));
+console.log("Expected output of isVowel(m) is false " + myFunctionTest(false, isVowel('m')));
+console.log("Expected output of sum([1,2,3,4,5]) is 15 " + myFunctionTest(15, sum([1,2,3,4,5])));
+console.log("Expected output of multiply([1,2,3,4,5]) is 120 " + myFunctionTest(120, multiply([1,2,3,4,5])));
+console.log("Expected output of reverse('nayaran') is nayaran " + myFunctionTest("nayaran", reverse("narayan")));
+console.log("Expected output of findLongestWord(['narayan','ganesh','kashinath']) is 9 " + myFunctionTest(9, findLongestWord(['narayan','ganesh','kashinath'])));
+console.log("Expected output of filterLongWords(['narayan','ganesh','kashinath'], 6) is ['narayan','kashinath'] " + myFunctionTest("narayan,kashinath", filterLongWords(['narayan','ganesh','kashinath'], 6)));
+console.log("Expected output of multiplyEachElementBy10([1,3,5,3,3]) is [10,30,50,30,30] " + myFunctionTest([10,30,50,30,30], multiplyEachElementBy10([1,3,5,3,3])));
+console.log("Expected output of getArrayWithOnlyNumber3([1,3,5,3,3]) is [3,3,3] " + myFunctionTest([3,3,3], getArrayWithOnlyNumber3([1,3,5,3,3])));
+console.log("Expected output of getProductOfArray([1,3,5,3,3]) is 135 " + myFunctionTest(135, getProductOfArray([1,3,5,3,3])));
+
+
+    </script>
+</head>
+<body>
+
+Look in the Chrome developer console to see the output. CTRL_SHIFT_J <br />
+Or on Firefox with CTRL_SHIFT_K
+
+</body>
+</html>
