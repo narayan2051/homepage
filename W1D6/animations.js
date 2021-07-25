@@ -641,9 +641,9 @@ var DIVE = "  o\n" +
 // can also access the animations as an associative array / hash map,
 // such as ANIMATIONS["Bike"] or ANIMATIONS["Dive"]
 export var ANIMATIONS = [];
-ANIMATIONS["Blank"] = ANIMATIONS["blank"] = ANIMATIONS["BLANK"] = "";
-ANIMATIONS["Custom"] = ANIMATIONS["custom"] = ANIMATIONS["CUSTOM"] = CUSTOM;   // you could change the value of this in your code
-ANIMATIONS["Exercise"] = ANIMATIONS["exercise"] = ANIMATIONS["EXERCISE"] = EXERCISE;
-ANIMATIONS["Juggler"] = ANIMATIONS["juggler"] = ANIMATIONS["JUGGLER"] = JUGGLER;
-ANIMATIONS["Bike"] = ANIMATIONS["bike"] = ANIMATIONS["BIKE"] = BIKE;
-ANIMATIONS["Dive"] = ANIMATIONS["dive"] = ANIMATIONS["DIVE"] = DIVE;
+ANIMATIONS.Blank = ANIMATIONS.blank = ANIMATIONS.BLANK = "";
+ANIMATIONS.Custom= ANIMATIONS.custom = ANIMATIONS.CUSTOM = CUSTOM;   // you could change the value of this in your code
+ANIMATIONS.Exercise = ANIMATIONS.exercise = ANIMATIONS.EXERCISE = EXERCISE;
+ANIMATIONS.Juggler = ANIMATIONS.juggler = ANIMATIONS.JUGGLER = JUGGLER;
+ANIMATIONS.Bike = ANIMATIONS.bike = ANIMATIONS.BIKE = BIKE;
+ANIMATIONS.Dive = ANIMATIONS.dive = ANIMATIONS.DIVE = DIVE;
