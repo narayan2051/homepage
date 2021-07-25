@@ -1,6 +1,7 @@
 window.onload = function () {
   "use strict";
 
+
   var start = document.getElementById("start");
   var textArea = document.getElementById("text-area");
   var stop = this.document.getElementById("stop");
@@ -38,7 +39,7 @@ window.onload = function () {
 
 
   function setInitialText() {
-    initialText = ANIMATIONS[animation.value];
+    initialText = ANIMATION[animation.value];
     textArea.value = initialText;
   }
 
@@ -83,4 +84,4 @@ window.onload = function () {
     btn.removeAttribute("disabled");
   }
 
-}
+};
