@@ -1,4 +1,3 @@
-import { ANIMATION } from 'animations.js';
 window.onload = function () {
   "use strict";
 
@@ -39,7 +38,7 @@ window.onload = function () {
 
 
   function setInitialText() {
-    initialText = ANIMATION[animation.value];
+    initialText = ANIMATIONS[animation.value];
     textArea.value = initialText;
   }
 
