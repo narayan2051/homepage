@@ -1,6 +1,6 @@
+import { ANIMATION } from 'animations.js';
 window.onload = function () {
   "use strict";
-
 
   var start = document.getElementById("start");
   var textArea = document.getElementById("text-area");
