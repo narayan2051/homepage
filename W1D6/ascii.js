@@ -80,9 +80,7 @@ window.onload = function () {
   function disableElement(btn) {
     btn.setAttribute("disabled", "disabled");
   }
-
   function enableElement(btn) {
     btn.removeAttribute("disabled");
   }
-
 };
