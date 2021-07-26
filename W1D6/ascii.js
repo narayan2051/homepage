@@ -6,7 +6,7 @@ window.onload = function () {
   var stop = this.document.getElementById("stop");
   var animation = this.document.getElementById("animation");
   var i = 0;
-  var interval = null;
+  var interval;
   var initialText = "";
   var size = this.document.getElementById("fontsize");
   var turbo = this.document.getElementById("turbo");
@@ -54,17 +54,19 @@ window.onload = function () {
   }
 
   function startAnimation() {
+    interval = null;
     disableElement(start);
     disableElement(animation);
     disableElement(textArea);
     enableElement(stop);
-    interval = null;
     playAnimation();
   }
 
   function playAnimation() {
-    var textAreaValue = initialText.split("=====\n");
-    interval = setInterval(animate, delay, textAreaValue);
+    if (initialText !== "") {
+      var textAreaValue = initialText.split("=====\n");
+      interval = setInterval(animate, delay, textAreaValue);
+    }
   }
 
   function animate(arr) {
