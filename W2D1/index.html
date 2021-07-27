@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <!-- add mocha css, to show results -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css"
+    />
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+      mocha.setup("bdd");
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+      let assert = chai.assert;
+    </script>
+
+    <script>
+      /*function to get sum of array*/
+
+      function sum(arr) {
+        return arr.reduce((elem1, elem2) => elem1 + elem2);
+      }
+      /* Function to multiply array*/
+      function multiply(arr) {
+        return arr.reduce((elem1, elem2) => elem1 * elem2);
+      }
+
+      function reverse(str) {
+        return str.split("").reduce((char1, char2) => {
+          return char2 + char1;
+        });
+      }
+
+      function filterLongWords(strArray, num) {
+        return strArray.filter((word) => word.length > num);
+      }
+
+      function multiplyEachElementBy10(arr) {
+        return arr.map((elem) => {
+          return elem * 10;
+        });
+      }
+
+      function getArrayWithOnlyNumber3(arr) {
+        return arr.filter((elem) => {
+          return elem === 3;
+        });
+      }
+
+      function getProductOfArray(arr) {
+        return arr.reduce((num1, num2) => {
+          return num1 * num2;
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <!-- test run -->
+    <script>
+      //  sum function test
+      describe("sum of numbers", function () {
+        it("sum of numbers in array", function () {
+          assert.equal(sum([5, 10, 15, 20]), 50);
+        });
+      });
+
+      //Multiply function test
+      describe("Multiplication of all element in array", function () {
+        it("Element passed on function [2,3,4,10] expected is 240", function () {
+          assert.equal(multiply([2, 3, 4, 10]), 240);
+        });
+      });
+
+      //String reverse
+      describe("Reverse of Given String", function () {
+        it("Input= Narayan expected output=nayaraN", function () {
+          assert.equal(reverse("Narayan"), "nayaraN");
+        });
+      });
+
+      //Filter Long words
+      describe("Filtering the word from array whose length is greater than given Number", function () {
+        it("input= [tom,john,manish,jaxon,don] ,3 output= [john,manish,jaxon]", function () {
+          assert.equal(
+            filterLongWords(
+              ["tom", "john", "manish", "jaxon", "don"],
+              3
+            ).toString(),
+            "john,manish,jaxon"
+          );
+        });
+      });
+
+      mocha.run();
+    </script>
+  </body>
+</html>
