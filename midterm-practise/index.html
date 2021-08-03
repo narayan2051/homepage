@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 1px solid black;
+        padding: 2px;
+        margin: 2px;
+      }
+       #a{
+        position: relative;
+
+      }
+      /*
+      #c{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+      } */
+
+
+      #b{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+      }
+      #c{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="a">
+      A
+      <div id="b">
+        B
+        <div id="c">C <span>some</span>thing<span> else</span></div>
+      </div>
+      <div id="d">
+        D
+        <div id="e">E</div>
+      </div>
+    </div>
+  </body>
+</html>

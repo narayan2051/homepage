@@ -62,3 +62,71 @@ console.log(me.learn("WAP"));
 var teacher = new Teacher();
 teacher.initialize("Michal", 40);
 console.log(teacher.teach("WAP"));
+
+
+
+const CAR = (function () {
+  let speed = 0;
+  let direction = 0;
+  const gasPaddle = function () {
+    if (speed <= 115) {
+      speed += 5;
+    }
+  }
+
+  const breake = function () {
+    if (speed >= 10) {
+      speed -= 10;
+    }
+  }
+
+  const turnLeft = function (degree) {
+    direction -= degree;
+  }
+
+  const turnRight = function (degree) {
+    direction += degree;
+  }
+
+  const status = function () {
+    return "This car is driving direction " + direction + " at" + speed + "mph";
+  }
+
+  return {
+    gasPaddle: gasPaddle,
+    break: breake,
+    turnLeft: turnLeft,
+    turnRight: turnRight,
+    status: status
+  }
+
+})();
+
+
+function Computer() {
+}
+
+Computer.prototype.initialize = function (ram, cpu, storage) {
+  this.ram = ram;
+  this.cpu = cpu;
+  this.storage=storage;
+}
+Computer.prototype.runProgram = function (program) {
+  console.log("running" + program);
+}
+
+
+function Laptop(battery) {
+  this.battery = battery;
+}
+
+Laptop.prototype = new Computer();
+
+Laptop.prototype.carryAround = function () {
+  console.log("carrying laptop:  cpu" + this.cpu + " ram: " + this.ram + " storage: " + this.storage + " battery: " + this.battery);
+
+}
+
+var dell = new Laptop("dell");
+dell.initialize("test","test","test");
+dell.carryAround();
