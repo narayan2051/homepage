@@ -2,21 +2,21 @@
 
 
 
-describe("Validating account number", function () {
+describe("Validating account number:getNumber()", function () {
   it("validating get number", () => {
     let account = new Account("129321DS");
     assert.equal(account.getNumber(), "129321DS");
   })
 });
 
-describe("Validating with default balance", function () {
+describe("Validating with default balance:getBalance()", function () {
   it("validating default balance 0.", () => {
     let account = new Account("129321DS");
     assert.equal(account.getBalance(), 0);
   });
 });
 
-describe("Validating after depositing 5000", function () {
+describe("Validating after depositing 5000:deposit()", function () {
   it("validating after adding 5000 balance. Balance should be 5000", () => {
     let account = new Account("129321DS");
     account.deposit(5000);
@@ -24,7 +24,7 @@ describe("Validating after depositing 5000", function () {
   })
 });
 
-describe("Validating after withdraw 500", function () {
+describe("Validating after withdraw 500:withdraw()", function () {
   it("validating after withdraw 500 from balance. Balance should be 4500", () => {
     let account = new Account("129321DS");
     account.deposit(5000);
@@ -33,8 +33,8 @@ describe("Validating after withdraw 500", function () {
   });
 });
 
-describe("Validating by depositing 5000 and withdraw withdraw 5500", function () {
-  it("Should throw Range error", () => {
+describe("Validating by depositing 5000 and withdraw withdraw 5500:withdraw()", function () {
+  it("Should throw Range error. Try to withdraw greater balance", () => {
     let account = new Account("129321DS");
     account.deposit(5000);
     try {
@@ -46,7 +46,7 @@ describe("Validating by depositing 5000 and withdraw withdraw 5500", function ()
   });
 });
 
-describe("Validating toString", function () {
+describe("Validating toString:toString()", function () {
   it("toString check", () => {
     let account = new Account("129321DS");
     account.deposit(5000);
@@ -55,7 +55,7 @@ describe("Validating toString", function () {
   });
 });
 
-describe("Validating add interest on saving account", function () {
+describe("Validating add interest on saving account:addInterest()", function () {
   it("Adding interest to saving account", () => {
     let account = new SavingAccount("129321DS", 15);
     account.deposit(5000);
@@ -64,7 +64,7 @@ describe("Validating add interest on saving account", function () {
   });
 });
 
-describe("Validating the interest rate on saving account", function () {
+describe("Validating the interest rate on saving account:depositingOnSaving Account", function () {
   it("validating getInterest function", () => {
     let account = new SavingAccount("129321DS", 15);
     account.deposit(5000);
@@ -80,7 +80,7 @@ describe("Validating Checking account", function () {
   });
 });
 
-describe("Validating Checking account", function () {
+describe("Validating Checking account:withdraw() from checking account", function () {
   it("Checking withdraw function", () => {
     let account = new CheckingAccount("129321DS", 100);
     account.deposit(5000);
@@ -94,7 +94,7 @@ describe("Validating Checking account", function () {
 });
 
 describe("Validating Checking account", function () {
-  it("To string method", () => {
+  it("To string method :toString()", () => {
     let account = new CheckingAccount("129321DS", 1500);
     account.deposit(5000);
     account.setOdLimit(2000);
@@ -102,14 +102,14 @@ describe("Validating Checking account", function () {
   });
 });
 
-describe("Validating Bank Class Method", function () {
+describe("Validating Bank Class Method:addAccount", function () {
   it("Add Account test", () => {
     let bank = new Bank();
     assert.equal(bank.addAccount(), 1);
   });
 });
 
-describe("Validating Bank Class Method", function () {
+describe("Validating Bank Class Method:addSavingAccount()", function () {
   it("Add Saving Account test", () => {
     let bank = new Bank();
     bank.addSavingsAccount();
@@ -117,7 +117,7 @@ describe("Validating Bank Class Method", function () {
   });
 });
 
-describe("Validating Bank Class Method", function () {
+describe("Validating Bank Class Method:addingCheckingAccount()- three checking account", function () {
   it("Add Saving Account test", () => {
     let bank = new Bank();
     bank.addCheckingAccount(1500);
@@ -126,7 +126,7 @@ describe("Validating Bank Class Method", function () {
   });
 });
 
-describe("Validating Bank Class Method", function () {
+describe("Validating Bank Class Method:closeAccount()", function () {
   it("Add Saving Account test", () => {
     let bank = new Bank();
     bank.addCheckingAccount(1500);
@@ -137,7 +137,7 @@ describe("Validating Bank Class Method", function () {
   });
 });
 
-describe("Validating Bank Class Method:bankReport", function () {
+describe("Validating Bank Class Method:accountReport", function () {
   it("Bank Report Test", () => {
     let bank = new Bank();
     bank.addCheckingAccount(1500);
