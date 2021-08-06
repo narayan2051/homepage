@@ -1,5 +1,5 @@
-const mycar= require('./my_car.js')
+const mycar = require("./my_car.js");
 
-console.log(mycar.drive());
-console.log(mycar.turn("30 degree"));
-console.log(mycar.break());
+mycar.drive();
+mycar.turn("30 degree");
+mycar.break();
