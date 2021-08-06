@@ -3,7 +3,7 @@ const readline = require("readline").createInterface({
   output: process.stdout,
 });
 
- const sumNumberRecursively = (sum) => {
+const sumNumberRecursively = (sum) => {
   readline.question("Enter Number: ", (num) => {
     if (num === "stop") {
       readline.close();
