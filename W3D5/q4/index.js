@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
     }" rel="stylesheet"/>
     <title> Form </title>
     </head>
-    <form method="POST" action="/output">
+    <form method="POST" action="/result">
         <label> Name</label>
         <input type="text" name="name"/>
         <label> Age</label>
@@ -29,12 +29,14 @@ app.get("/", (req, res) => {
     </html>`
   );
 });
-app.post("/output", (req, res) => {
-  res.send(`The sumitted name is ${req.body.name} and age is ${req.body.age}`);
+app.post("/result", (req, res) => {
+  res.redirect(`/output?name=${req.body.name}&age=${req.body.age}`);
 });
 
 app.get("/output", (req, res) => {
-  res.send(`The sumitted name is ${req.query.name} and age is ${req.query.age}`);
+  res.send(
+    `The sumitted name is ${req.query.name} and age is ${req.query.age}`
+  );
 });
 
 app.listen(3000, () => {
