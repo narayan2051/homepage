@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="css/<%=css%>" rel="stylesheet"/>
+    <title>Document</title>
+  </head>
+  <body>
+      <%- include('header')%>
+      <div class="main">
+      <h3>Your item in cart</h3>
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <% for (let i=0;i<cartList.length;i++) { %>
+      <tr>
+        <td><%= cartList[i].name %></td>
+        <td><%= cartList[i].price %></td>
+        <td><%= cartList[i].quantity %></td>
+      </tr>
+      <%}%>
+    </table>
+    <button class="btn btn-success">Confirm Buy</button>
+  </div>
+    <%- include('footer')%>
+  </body>
+</html>

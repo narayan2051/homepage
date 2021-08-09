@@ -30,13 +30,11 @@ app.get("/", (req, res) => {
   );
 });
 app.post("/result", (req, res) => {
-  res.redirect(`/output?name=${req.body.name}&age=${req.body.age}`);
+  res.redirect(`/output?name=${req.body.name}&age=${req.body.age}`)
 });
 
 app.get("/output", (req, res) => {
-  res.send(
-    `The sumitted name is ${req.query.name} and age is ${req.query.age}`
-  );
+  res.send(`The sumitted name is ${req.query.name} and age is ${req.query.age}`);
 });
 
 app.listen(3000, () => {

@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+
+app.get("/", getLastName, (req, res) => {
   res.send(
     `<form method="POST" action="/result">
         <label> Name</label>
@@ -14,8 +15,6 @@ app.get("/", (req, res) => {
   );
 });
 app.post("/result", (req, res) => {
-  console.log(req.body.name);
-  console.log(req.body.age);
   res.send(`The sumitted name is ${req.body.name} and age is ${req.body.age}`);
 });
 

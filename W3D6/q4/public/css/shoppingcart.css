@@ -1,0 +1,18 @@
+
+.header{
+    text-align: center;
+    background-color:lightblue;
+    color:black;
+    padding:5px;
+  }
+  
+  .footer{
+    background-color: aquamarine;
+    text-align: center;
+    padding: 5px;
+    height:100px;
+  }
+
+  .main{
+      background-color: blanchedalmond;
+  }
