@@ -13,21 +13,21 @@ td {
   text-align: center;
   grid-template-columns: 25% 25% 25% 25%;
 }
+.container div {
+  padding-top: 20px;
+  border-right: 3px solid black;
+}
 
 .col1 {
-  border-right: 3px solid black;
   grid-area: col1;
 }
 .col2 {
-  border-right: 3px solid black;
   grid-area: col2;
 }
 .col3 {
-  border-right: 3px solid black;
   grid-area: col3;
 }
 .col4 {
-  border-right: 3px solid black;
   grid-area: col4;
 }
 
@@ -38,19 +38,19 @@ input[type="submit"] {
   padding: 5px;
   margin: 5px;
 }
-.header{
+.header {
   text-align: center;
-  background-color:lightblue;
-  color:black;
-  padding:5px;
+  background-color: lightblue;
+  color: black;
+  padding: 5px;
 }
 
-.footer{
+.footer {
   background-color: aquamarine;
   text-align: center;
   padding: 5px;
-  height:100px;
+  height: 100px;
 }
-.main{
+.main {
   background-color: blanchedalmond;
 }
