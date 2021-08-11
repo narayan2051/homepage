@@ -1,0 +1,65 @@
+table {
+  border-bottom: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "col1 col2 col3 col4";
+  border: 1px solid black;
+  text-align: center;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.container div {
+  padding-top: 20px;
+  border-right: 3px solid black;
+}
+
+.col1 {
+  grid-area: col1;
+}
+.col2 {
+  grid-area: col2;
+}
+.col3 {
+  grid-area: col3;
+}
+.col4 {
+  grid-area: col4;
+}
+
+input[type="submit"] {
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+.header {
+  text-align: center;
+  background-color: lightblue;
+  color: black;
+  padding: 5px;
+}
+
+.footer {
+  background-color: aquamarine;
+  text-align: center;
+  padding: 5px;
+  height: 100px;
+}
+.main {
+  background-color: blanchedalmond;
+}
+#message{
+  background: green;
+  text-align: center;
+}
+.goToCart{
+  height: 40px;
+  padding: 5px;
+  background-color: bisque;
+}

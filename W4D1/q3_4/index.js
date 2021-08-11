@@ -8,8 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/css", express.static(path.join(__dirname, "public", "css")));
 app.use(
   session({
-    secret: "Salt for signed cookie",
-    resave: true,
+    secret: "djksfhkjhki3uyiri3ri2108490890324urwejkfkjdsh",
   })
 );
 
